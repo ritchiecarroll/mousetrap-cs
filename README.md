@@ -15,8 +15,8 @@ This repository is not affiliated with or endorsed by Alan Shreve, the authors o
 ## NuGet
 
 Published as [`nugetgo.github.com.inconshreveable.mousetrap`](https://www.nuget.org/packages/nugetgo.github.com.inconshreveable.mousetrap)
-1.1.0, from this repository's tag `nuget-1.1.0`. A rebuild of the same Go version adds a fourth, revision part:
-`1.1.0.N`, where N counts up from 1. The package holds one assembly per operating system: `StartedByExplorer` has a
+1.1.0, rebuilt as 1.1.0.1 from this repository's tag `nuget-1.1.0.1`. A rebuild of the same Go version adds a fourth,
+revision part: `1.1.0.N`, where N counts up from 1. The package holds one assembly per operating system: `StartedByExplorer` has a
 Windows body and a body for every other system, so `lib/net10.0/` carries the Windows assembly and
 `runtimes/<rid>/lib/net10.0/` carries each runtime's (win-x64, linux-x64, osx-x64, osx-arm64).
 
@@ -45,16 +45,17 @@ The package's Windows and macOS assemblies are converted from the same source wi
 
 ```
 cd mousetrap
-dotnet build github.com.inconshreveable.mousetrap.csproj -c Release -p:GoStdLibVersion=1.26.10.1
+dotnet build github.com.inconshreveable.mousetrap.csproj -c Release -p:GoStdLibVersion=1.26.10.2
 ```
 
-The restore takes the `go.*` packages from nuget.org. `-p:GoStdLibVersion=1.26.10.1` pins the go2cs standard-library
+The restore takes the `go.*` packages from nuget.org. `-p:GoStdLibVersion=1.26.10.2` pins the go2cs standard-library
 release the package was built against; without it the build takes the newest `1.26.*`.
 
 ## Provenance
 
-Converted with `go2cs -recurse=nuget -platforms linux/amd64` at go2cs commit `430f3ad68a`, which carries the go.* 1.26.10.1
-release's runtime and source generators unchanged, plus the nugetgo rebuild tools. mousetrap has no Go tests; its
+Converted with `go2cs -recurse=nuget -platforms linux/amd64` at go2cs commit `1ca308d85f`, the go.* 1.26.10.2
+release record, whose runtime, source generators and nugetgo tools it carries unchanged, and built and packed with
+the .NET SDK 10.0.112. mousetrap has no Go tests; its
 proof is one behavior row per shipped runtime: the module's sample program run with `go run` and, converted against
 the package, with `dotnet`, on a hosted runner of that operating system, with byte-identical output. The package ships
 those rows as `VALIDATION.md`.

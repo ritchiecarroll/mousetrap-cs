@@ -49,7 +49,7 @@ using static go.github.com.inconshreveable.mousetrap_package;
 // or has none - golib, the BCL and hand-written conversions - and reports its own C# position.
 
 // <GoSourcePositionMaps>
-[assembly: go.GoPositionMap("github.com/inconshreveable/mousetrap@v1.1.0/trap_others.go", "trap_others.cs", "AAQcgg==")]
+[assembly: GoPositionMap("github.com/inconshreveable/mousetrap@v1.1.0/trap_others.go", "trap_others.cs", "AAQcgg==")]
 // </GoSourcePositionMaps>
 
 namespace go.github.com.inconshreveable;
