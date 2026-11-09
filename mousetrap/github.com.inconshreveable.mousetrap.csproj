@@ -34,7 +34,7 @@
     <InterceptorsNamespaces>$(InterceptorsNamespaces);go2cs.Interceptors</InterceptorsNamespaces>
     <WarningsAsErrors>$(WarningsAsErrors);CS8032;CS8034;CS8784;CS8785;CS9057</WarningsAsErrors>
     <!-- What this package's conversion is a function of; nugetgo-pack.ps1 checks its validation proof names the same -->
-    <GoInputDigest>sha256-4d76ff537694e85a17ce2097a3c519df0de517b8314d72ccb5ff2dc9e4007f01</GoInputDigest>
+    <GoInputDigest>sha256-276b6301f6681f0135293acb185e4662bebcbafe55e9b5f03927bbc60c654d6d</GoInputDigest>
   </PropertyGroup>
 
   <!-- Build outputs are copied to $(OutDir), so this default must also defer to an explicit
@@ -63,6 +63,8 @@
     <TrimMode Condition="'$(TrimMode)'==''">partial</TrimMode>
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <!-- Per-assembly ReadyToRun for a single file: the SDK's composite default, compressed, costs seconds of start-up. https://github.com/ritchiecarroll/go2cs/blob/master/docs/Tuning.md -->
+    <PublishReadyToRunComposite Condition="'$(PublishReadyToRunComposite)'==''">false</PublishReadyToRunComposite>
     <!-- Opt-in for Ubuntu's packaged .NET 10, where on-stack replacement can end a program early (0x80131506 or a silent
          exit 0); costs about 90 ms of startup; becomes the default if a converted program reproduces it. https://github.com/ritchiecarroll/go2cs/blob/master/docs/KnownIssues.md -->
     <!-- <TieredCompilationQuickJitForLoops>false</TieredCompilationQuickJitForLoops> -->

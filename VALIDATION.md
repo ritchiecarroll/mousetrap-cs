@@ -11,7 +11,7 @@ which is the package's own for that RID, and the host it ran on. No row stands f
 
 | RID | Host | Assembly | Outputs equal |
 |:--|:--|:--|:--|
-| win-x64 | windows-latest (image win25-vs2026 20261030.294.1) (Windows X64: Microsoft Windows 10.0.26100) | `github.com.inconshreveable.mousetrap.dll sha256-1119dcdae0510d28770163ed65d5de181ff8e54bb64aaa36589f85ec78607e84` | true (go go1.26.10, dotnet 10.0.403) |
-| linux-x64 | ubuntu-latest (image ubuntu26 20261026.180.1) (Linux X64: Ubuntu 26.04.1 LTS) | `github.com.inconshreveable.mousetrap.dll sha256-df518d2a9ce0d52343f014444509cbb250a6e7d513ef632da67c4a6befda47de` | true (go go1.26.10, dotnet 10.0.403) |
-| osx-x64 | macos-15-intel (image macos15 20260824.0482.1) (macOS X64: macOS 15.7.9) | `github.com.inconshreveable.mousetrap.dll sha256-df518d2a9ce0d52343f014444509cbb250a6e7d513ef632da67c4a6befda47de` | true (go go1.26.10, dotnet 10.0.403) |
-| osx-arm64 | macos-15 (image macos15 20261028.0489.1) (macOS ARM64: macOS 15.8.2) | `github.com.inconshreveable.mousetrap.dll sha256-df518d2a9ce0d52343f014444509cbb250a6e7d513ef632da67c4a6befda47de` | true (go go1.26.10, dotnet 10.0.403) |
+| win-x64 | windows-latest (image win25-vs2026 20261103.298.1) (Windows X64: Microsoft Windows 10.0.26100) | `github.com.inconshreveable.mousetrap.dll sha256-37d07c6b47742e6728135f577053ecffa129531fa687fbf0146546d97bf81222` | true (go go1.26.10, dotnet 10.0.403) |
+| linux-x64 | ubuntu-latest (image ubuntu26 20261101.186.1) (Linux X64: Ubuntu 26.04.1 LTS) | `github.com.inconshreveable.mousetrap.dll sha256-b42e158683b39de01bd0194264333dfa97397239f0c0b9f55d50190f5ec9bf1d` | true (go go1.26.10, dotnet 10.0.403) |
+| osx-x64 | macos-15-intel (image macos15 20260824.0482.1) (macOS X64: macOS 15.7.9) | `github.com.inconshreveable.mousetrap.dll sha256-b42e158683b39de01bd0194264333dfa97397239f0c0b9f55d50190f5ec9bf1d` | true (go go1.26.10, dotnet 10.0.403) |
+| osx-arm64 | macos-15 (image macos15 20261104.0514.1) (macOS ARM64: macOS 15.8.2) | `github.com.inconshreveable.mousetrap.dll sha256-b42e158683b39de01bd0194264333dfa97397239f0c0b9f55d50190f5ec9bf1d` | true (go go1.26.10, dotnet 10.0.403) |
